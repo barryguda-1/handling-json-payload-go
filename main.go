@@ -60,6 +60,7 @@ func getBookHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	// Sample Json Responses /books?id=1,2,3/
+	// Best method to use /books/{id}
 	bookIDStr := r.URL.Query().Get("id")
 
 	if bookIDStr == "" {
